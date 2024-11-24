@@ -11,7 +11,7 @@ class NaiveBayes:
     def __init__(self, totalEntries):
         # key = class of weather_descriptions, value = frequency
         self.labels = {}
-        # total number of 
+        # total number of entries
         self.totalEntries = totalEntries
         # key = attribute, value = classes of attribute
         self.attributes = {}
