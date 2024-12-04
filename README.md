@@ -79,10 +79,10 @@ x_categorical is the dataframe where each column is one of my selected categoric
 
 To train my classifier, I wrote separate functions (see above) to calculate and pre-save the conditional probabilities depending on the kind of attribute in question (categorical or continuous). I used the formulas provided in the lecture slides. In my predict() function, I calculated the conditional probabilities of each possible weather label given the attributes in the 28th day’s row by retrieving the necessary conditional probabilities from my self.condProbability dictionary and multiplying them together.
 
-When looking through the training.xlsx file, I noticed that the presence of any precipitation ruled out any possibility of the weather description being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast”. After printing my incorrect predictions on the given test dataset, I realized that most of my missed predictions were false “Sunny” and “Clear” predictions for days which had precipitation. As such, I coded a check in my prediction() function to set the probability of the prediction being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” to 0 if the 28th day’s ‘precip’ attribute was either “Light precipitation”, “Moderate precipitation”, or “Heavy precipitation”. This check bumped my accuracy from 0.669 to 0.678
+When looking through the training.xlsx file, I noticed that the presence of any precipitation ruled out any possibility of the weather description being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast”. After printing my incorrect predictions on the given test dataset, I realized that most of my missed predictions were false “Sunny” and “Clear” predictions for days which had precipitation. As such, I coded a check in my prediction() function to set the probability of the prediction being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” to 0 if the 28th day’s ‘precip’ attribute was either “Light precipitation”, “Moderate precipitation”, or “Heavy precipitation”. This check bumped my accuracy from 0.669 to 0.786
 
 ## Results
-Accuracy: 0.678
+Accuracy: 0.786
 Runtime: 18.37 seconds
 I attribute my improvements in accuracy to including the previous three days of weather_descriptions in my training dataset and filtering out “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” predictions for days which were preceded with any sort of precipitation.
 
