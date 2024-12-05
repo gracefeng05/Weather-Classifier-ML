@@ -87,7 +87,17 @@ Runtime: 18.37 seconds
 I attribute my improvements in accuracy to including the previous three days of weather_descriptions in my training dataset and filtering out “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” predictions for days which were preceded with any sort of precipitation.
 
 ## Challenges
-I struggled with selecting the optimal combination of attributes to train on. After arbitrarily testing random combinations, I realized that my approach was uninformed and entirely random. To gain more insight into the training dataset, I manually looked into the training.xlsx file to manually pinpoint patterns.
+One of the biggest challenges I faced was selecting the optimal combination of attributes to train my model. Initially, my approach was uninformed and random—I tested arbitrary combinations of features without understanding their relationships with the target variable (weather_description). Unsurprisingly, this led to inconsistent results and limited accuracy improvements.
+
+To address this, I focused on feature engineering to uncover patterns within the training dataset. I started by creating additional features, such as the previous three days' weather descriptions (wd1, wd2, and wd3) and the 3-day moving averages of numerical attributes like temperature and wind speed. These features helped capture temporal patterns in the data and provided context for making predictions.
+
+Additionally, I wrote a Python script to calculate the correlation coefficients between the target variable and each attribute in the dataset. This helped me identify which features were most strongly correlated with weather outcomes. For example:
+
+Attributes like precipitation and humidity showed high correlations with cloudy or rainy conditions.
+Attributes like temperature and visibility were more indicative of sunny or clear days.
+Using this data-driven approach, I refined my feature selection, focusing on high-impact attributes while excluding noisy or irrelevant ones. For example, wind direction (wind_degree) was found to have minimal correlation with the target variable and was excluded from the final training set.
+
+Through these adjustments, I not only improved the relevance of the features used in training but also enhanced the model's interpretability and accuracy. This systematic approach replaced my initial guesswork and laid the foundation for the model’s success.
 
 
 
