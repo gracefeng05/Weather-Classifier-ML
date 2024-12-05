@@ -1,6 +1,6 @@
 # README
 
-The following report details the Naive Bayes weather prediction algorithm I developed for a project in my university course, CMPSC 165A: Artificial Intelligence. When evaluated against the test cases, my algorithm achieved the highest accuracy in a class of 100 students, earning the top ranking.
+The following report details the Naive Bayes weather prediction algorithm I developed for a project in a machine learning model competition. When evaluated against the test cases, my algorithm achieved the highest accuracy in a submission pool of 100 competitors, earning the top ranking.
 
 The code can be found here: [Naive Bayes Weather Classifier](https://github.com/gracefeng05/Weather-Classifier-ML)
 
