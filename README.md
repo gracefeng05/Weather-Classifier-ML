@@ -1,6 +1,6 @@
 # README
 
-The following report details the Naive Bayes weather prediction algorithm I developed for a project in UCSB's CMPSC 165A offering. When evaluated against the test cases, my algorithm achieved the second highest accuracy in a submission pool of 100 competitors, earning the top ranking.
+The following report details the Naive Bayes weather prediction algorithm I developed for a project in CMPSC 165A: Artificial Intelligence taught at UCSB. When evaluated against the test cases, my algorithm achieved the second highest accuracy in a submission pool of 100 competitors, earning the top ranking.
 
 The code can be found here: [Naive Bayes Weather Classifier](https://github.com/gracefeng05/Weather-Classifier-ML)
 
