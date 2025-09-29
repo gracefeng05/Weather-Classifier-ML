@@ -1,6 +1,6 @@
 # README
 
-The following report details the Naive Bayes weather prediction algorithm I developed for a project in a machine learning model competition. When evaluated against the test cases, my algorithm achieved the highest accuracy in a submission pool of 100 competitors, earning the top ranking.
+The following report details the Naive Bayes weather prediction algorithm I developed for a project in a machine learning model competition. When evaluated against the test cases, my algorithm achieved the second highest accuracy in a submission pool of 100 competitors, earning the top ranking.
 
 The code can be found here: [Naive Bayes Weather Classifier](https://github.com/gracefeng05/Weather-Classifier-ML)
 
@@ -82,7 +82,7 @@ To train my classifier, I wrote separate functions (see above) to calculate and 
 When looking through the training.xlsx file, I noticed that the presence of any precipitation ruled out any possibility of the weather description being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast”. After printing my incorrect predictions on the given test dataset, I realized that most of my missed predictions were false “Sunny” and “Clear” predictions for days which had precipitation. As such, I coded a check in my prediction() function to set the probability of the prediction being “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” to 0 if the 28th day’s ‘precip’ attribute was either “Light precipitation”, “Moderate precipitation”, or “Heavy precipitation”. This check bumped my accuracy from 0.669 to 0.786
 
 ## Results
-Accuracy: 0.786
+Accuracy: 0.678
 Runtime: 18.37 seconds
 I attribute my improvements in accuracy to including the previous three days of weather_descriptions in my training dataset and filtering out “Sunny”, “Clear”, “Cloudy”, “Partly cloudy”, or “Overcast” predictions for days which were preceded with any sort of precipitation.
 
